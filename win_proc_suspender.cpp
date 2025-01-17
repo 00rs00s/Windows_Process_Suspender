@@ -38,7 +38,7 @@ int FindTarget(const char *procname){
 int main(){
   HANDLE hProcessSnap ;
   PROCESSENTRY32 pe32;
-  // Set the size of the structure before using it.
+  // Set the size of the structure
   pe32.dwSize = sizeof( PROCESSENTRY32 );
   DWORD dwPriorityClass;
   HANDLE hProcess;
@@ -62,7 +62,7 @@ int main(){
             std::cout <<"Last error for "<<userInput<<": "<<last_err<<std::endl;
             printf("Error code (hex): 0x%X\n", last_err);
         }
-        //UnComment the line below if you do not have resources problem
+        //UnComment the line below to restrict resources usage
         //std::this_thread::sleep_for(std::chrono::milliseconds(50));
     }
     else{
